@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+
+<main>
+	<div class="catalogue">
+		{{ range (.Paginate (where .Pages "Type" "post")).Pages }}
+			<a href="{{ .Permalink }}" class="catalogue-item">
+				<div>
+					<time datetime="{{ .PublishDate }}" class="catalogue-time">{{ .PublishDate.Format "January 2, 2006" }}</time>
+					<h1 class="catalogue-title">{{ .Title }}</h1>
+					<div class="catalogue-line"></div>
+	
+					<p>
+						{{ .Summary }}
+					</p>
+	
+				</div>
+			</a>
+		{{ end }}
+	</div>
+	
+	<div class="pagination">
+		{{ if .Paginator.HasPrev }}
+			<a href="{{ .Paginator.Prev.URL }}" class="left arrow">&#8592;</a>
+		{{ end }}
+		{{ if .Paginator.HasNext }}
+			<a href="{{ .Paginator.Next.URL }}" class="right arrow">&#8594;</a>
+		{{ end }}
+	
+		<span>{{ .Paginator.PageNumber }}</span>
+	</div>
+</main>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+
+<main>
+	<div class="post">
+		<div class="post-info">
+		<span>Written by</span>
+		{{ if .Params.Author }}
+			{{ .Params.Author }}
+		{{ else }}
+			{{ .Site.Params.Author }}
+		{{ end }}
+
+		{{ if .PublishDate }}
+			<br>
+			<span>on&nbsp;</span><time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+		{{ end }}
+		</div>
+
+		<h1 class="post-title">{{ .Title }}</h1>
+		<div class="post-line"></div>
+
+		{{ .Content }}
+
+	</div>
+
+	<div class="pagination">
+		{{ if .Next }}
+		<a href="{{ .Next.URL }}" class="left arrow">&#8592;</a>
+		{{ end }}
+		{{ if .Prev }}
+		<a href="{{ .Prev.URL }}" class="right arrow">&#8594;</a>
+		{{ end }}
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+{{ partial "footer.html" . }}
