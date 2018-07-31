@@ -19,7 +19,7 @@
 	
 		<!-- CSS -->
 		{{ $style := resources.Get "scss/tale.scss" | toCSS | minify }}
-  	<link rel="stylesheet" href="{{ $style.Permalink }}">
+  		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 	
 		<!-- Favicon -->
