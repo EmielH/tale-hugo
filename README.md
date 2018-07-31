@@ -5,4 +5,4 @@ This is a port of the [Tale theme for Jekyll](https://github.com/chesterhow/tale
 ![Tale screenshot](https://raw.githubusercontent.com/EmielH/tale-hugo/master/images/screenshot.png)
 
 ## License
-See [LICENSE](LICENSE)
+See [LICENSE](https://github.com/EmielH/tale-hugo/blob/master/LICENSE)
