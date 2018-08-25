@@ -2,7 +2,7 @@
 
 <main>
 	<div class="catalogue">
-		{{ range (.Paginate (where .Pages "Type" "post")).Pages }}
+		{{ range (.Paginate .Pages).Pages }}
 			<a href="{{ .Permalink }}" class="catalogue-item">
 				<div>
 					<time datetime="{{ .PublishDate }}" class="catalogue-time">{{ .PublishDate.Format "January 2, 2006" }}</time>
