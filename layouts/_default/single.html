@@ -1,19 +1,19 @@
-{{ partial "header.html" . }}
+{{- partial "header.html" . }}
 
 <main>
 	<div class="post">
 		<div class="post-info">
 		<span>Written by</span>
-		{{ if .Params.Author }}
+		{{- if .Params.Author }}
 			{{ .Params.Author }}
-		{{ else }}
+		{{- else }}
 			{{ .Site.Params.Author }}
-		{{ end }}
+		{{- end }}
 
-		{{ if .PublishDate }}
+		{{- if .PublishDate }}
 			<br>
 			<span>on&nbsp;</span><time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
-		{{ end }}
+		{{- end }}
 		</div>
 
 		<h1 class="post-title">{{ .Title }}</h1>
@@ -24,15 +24,15 @@
 	</div>
 
 	<div class="pagination">
-		{{ if .Next }}
+		{{- if .Next }}
 		<a href="{{ .Next.URL }}" class="left arrow">&#8592;</a>
-		{{ end }}
-		{{ if .Prev }}
+		{{- end }}
+		{{- if .Prev }}
 		<a href="{{ .Prev.URL }}" class="right arrow">&#8594;</a>
-		{{ end }}
+		{{- end }}
 
 		<a href="#" class="top">Top</a>
 	</div>
 </main>
 
-{{ partial "footer.html" . }}
+{{- partial "footer.html" . }}

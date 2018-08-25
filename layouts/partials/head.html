@@ -1,20 +1,18 @@
 <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		{{ if eq .URL "/" }}
+		{{- if eq .URL "/" }}
 			<meta name="description" content="{{ .Site.Params.Description }}">
-		{{ else }}
-			{{ if .Description }}
-				<meta name="description" content="{{ .Description }}">
-			{{ end }}
-		{{ end }}
+		{{- else if .Description }}
+			<meta name="description" content="{{ .Description }}">
+		{{- end }}
 	
 		<title>
-			{{ if eq .URL "/" }}
+			{{- if eq .URL "/" }}
 				{{ .Site.Title }}
-			{{ else }}
+			{{- else }}
 				{{ .Title }} &middot; {{ .Site.Title }}
-			{{ end }}
+			{{- end }}
 		</title>
 	
 		<!-- CSS -->
