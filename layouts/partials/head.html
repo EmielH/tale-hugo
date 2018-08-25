@@ -18,7 +18,10 @@
 		</title>
 	
 		<!-- CSS -->
-		{{ $style := resources.Get "scss/tale.scss" | toCSS | minify }}
+		{{- $inServerMode	:= .Site.IsServer }}
+		{{- $cssTarget		:= "css/style.css" }}
+		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}		
+		{{- $style			:= resources.Get "scss/tale.scss" | toCSS $cssOptions }}
   		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 	

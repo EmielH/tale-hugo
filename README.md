@@ -47,7 +47,8 @@ If you have cloned the theme, you can run `git pull` inside the theme folder.
 Thanks 
 
 - to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
-- to [onedrawingperday](//github.com/digitalcraftsman), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo.
+- to [onedrawingperday](//github.com/digitalcraftsman), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
+- to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which I used some useful snippets of code.
 
 ## License
 See [LICENSE](https://github.com/EmielH/tale-hugo/blob/master/LICENSE).
