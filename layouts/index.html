@@ -24,7 +24,7 @@
         <a href="{{ .Permalink }}" class="catalogue-item">
             <div>
                 <p class="catalogue-item-title">
-                    <time datetime="{{ .PublishDate }}" class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
+                    <time datetime="{{ .PublishDate }}" class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}: {{ .Description }}
                 </p>
             </div>
         </a>
