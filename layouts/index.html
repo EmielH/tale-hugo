@@ -5,10 +5,12 @@
         <h2 class="catalogue-title">
             News
         </h2>
-		{{ range (.Paginate .Pages).Pages }}
+		{{ range first 5 .Pages.ByDate.Reverse }}
 			<a href="{{ .Permalink }}" class="catalogue-item">
 				<div>
-					<p class="catalogue-item-title"><time datetime="{{ .PublishDate }}" class="catalogue-time">{{ .PublishDate.Format "2006-01-01" }}</time> {{ .Title }}</p>
+					<p class="catalogue-item-title">
+                        <time datetime="{{ .PublishDate }}" class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
+                    </p>
 				</div>
 			</a>
 		{{ end }}
