@@ -15,6 +15,21 @@
 			</a>
 		{{ end }}
 	</div>
+    <div class="catalogue">
+        <h2 class="catalogue-title">
+            Projects
+        </h2>
+    {{ $projects := .Site.Taxonomies.categories.project  }}
+    {{ range $projects.Pages.ByDate.Reverse }}
+        <a href="{{ .Permalink }}" class="catalogue-item">
+            <div>
+                <p class="catalogue-item-title">
+                    <time datetime="{{ .PublishDate }}" class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
+                </p>
+            </div>
+        </a>
+    {{ end }}
+    </div>
 </main>
 
 {{ partial "footer.html" . }}
