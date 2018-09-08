@@ -12,6 +12,11 @@
         <ul>
             <li><a href="{{ "about" | absLangURL }}">About</a></li>
             <li><a href="{{ "posts" | absLangURL }}">Posts</a></li>
+        {{ if eq .Site.Language.Lang "ja" }}
+            <li><a href="{{ .Site.BaseURL }}">English</a></li>
+        {{ else }}
+            <li><a href="{{ printf "%s%s" .Site.BaseURL "ja" }}">Japanese</a></li>
+        {{ end }}
         </ul>
     </div>
 </nav>
