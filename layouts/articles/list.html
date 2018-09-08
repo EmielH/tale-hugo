@@ -2,12 +2,8 @@
 
 <main>
     <div class="catalogue">
-        <h2 class="catalogue-title">
-            Articles
-        </h2>
     {{ range (.Paginate .Pages).Pages.GroupByDate "2006"}}
-
-        <h2>{{ .Key }}</h2>
+        <h2 class="catalogue-date">{{ .Key }}</h2>
     {{ range .Pages }}
         <a href="{{ .Permalink }}" class="catalogue-item">
             <div>
