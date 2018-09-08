@@ -2,19 +2,22 @@
 
 <main>
     <div class="catalogue">
-    {{ range (.Paginate .Pages).Pages }}
+        <h2 class="catalogue-title">
+            Articles
+        </h2>
+    {{ range (.Paginate .Pages).Pages.GroupByDate "2006"}}
+
+        <h2>{{ .Key }}</h2>
+    {{ range .Pages }}
         <a href="{{ .Permalink }}" class="catalogue-item">
             <div>
-                <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ .PublishDate.Format "January 2, 2006" }}</time>
-                <h1 class="catalogue-title">{{ .Title }}</h1>
-                <div class="catalogue-line"></div>
-
-                <p>
-                {{ .Summary }}
+                <p class="catalogue-item-title">
+                    <time datetime="{{ .PublishDate }}"
+                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
                 </p>
-
             </div>
         </a>
+    {{ end }}
     {{ end }}
     </div>
 
