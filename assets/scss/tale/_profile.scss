@@ -1,4 +1,12 @@
 .profile {
+  margin-top: 10px;
+  white-space: nowrap;
+  &-box {
+    width: 50%;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+  }
   &-title {
     color: $default-color;
     font-family: $sans-serif;
@@ -11,5 +19,21 @@
     font-size: 0.8rem;
     font-weight: 10;
     margin: .5rem 1rem;
+    white-space: normal;
+  }
+  &-image {
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile {
+    white-space: normal;
+    &-box {
+      width: 100%;
+    }
   }
 }

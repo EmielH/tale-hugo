@@ -2,10 +2,15 @@
 
 <main>
     <div class="profile">
-        <h2 class="profile-title">
-            Profile
-        </h2>
-        <p class="profile-body">{{ .Content }}</p>
+        <div class="profile-box">
+            <h2 class="profile-title">
+                Profile
+            </h2>
+            <div class="profile-body">{{ .Content }}</div>
+        </div>
+        <div class="profile-box">
+            <img class="profile-image" src="{{ .Site.BaseURL }}/images/me.jpg"/>
+        </div>
     </div>
 	<div class="catalogue">
         <h2 class="catalogue-title">
