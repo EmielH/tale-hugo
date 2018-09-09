@@ -10,12 +10,11 @@
             <h2 class="nav-title">{{ .Site.Title }}</h2>
         </a>
         <ul>
-            <li><a href="{{ "about" | absLangURL }}">About</a></li>
-            <li><a href="{{ "articles" | absLangURL }}">Articles</a></li>
+            <li><a href="{{ "articles" | absLangURL }}">Archive</a></li>
         {{ if eq .Site.Language.Lang "ja" }}
-            <li><a href="{{ .Site.BaseURL }}">English</a></li>
+            <li><a href="{{ .Site.BaseURL }}">En</a></li>
         {{ else }}
-            <li><a href="{{ printf "%s%s" .Site.BaseURL "ja" }}">Japanese</a></li>
+            <li><a href="{{ printf "%s%s" .Site.BaseURL "ja" }}">Ja</a></li>
         {{ end }}
         </ul>
     </div>
