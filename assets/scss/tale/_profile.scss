@@ -24,6 +24,14 @@
   &-image {
     margin: 14px auto;
   }
+
+  a {
+    color: $default-color;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 600px) {
