@@ -9,23 +9,24 @@
             <div class="profile-body">{{ .Content }}</div>
         </div>
         <div class="profile-box">
-            <img class="profile-image" src="{{ .Site.BaseURL }}/images/me.jpg"/>
+            <img class="profile-image" src="{{ .Site.BaseURL }}{{ .Site.Params.profileImagePath }}"/>
         </div>
     </div>
-	<div class="catalogue">
+    <div class="catalogue">
         <h2 class="catalogue-title">
             News
         </h2>
-		{{ range first 5 .Pages.ByDate.Reverse }}
-			<a href="{{ .Permalink }}" class="catalogue-item">
-				<div>
-					<p class="catalogue-item-title">
-                        <time datetime="{{ .PublishDate }}" class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
-                    </p>
-				</div>
-			</a>
-		{{ end }}
-	</div>
+    {{ range first 5 .Pages.ByDate.Reverse }}
+        <a href="{{ .Permalink }}" class="catalogue-item">
+            <div>
+                <p class="catalogue-item-title">
+                    <time datetime="{{ .PublishDate }}"
+                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
+                </p>
+            </div>
+        </a>
+    {{ end }}
+    </div>
     <div class="catalogue">
         <h2 class="catalogue-title">
             Projects
@@ -35,7 +36,9 @@
         <a href="{{ .Permalink }}" class="catalogue-item">
             <div>
                 <p class="catalogue-item-title">
-                    <time datetime="{{ .PublishDate }}" class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}: {{ .Description }}
+                    <time datetime="{{ .PublishDate }}"
+                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
+                    : {{ .Description }}
                 </p>
             </div>
         </a>
