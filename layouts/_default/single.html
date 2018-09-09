@@ -2,22 +2,14 @@
 
 <main>
 	<div class="post">
-		<div class="post-info">
-		<span>Written by</span>
-		{{- if .Params.Author }}
-			{{ .Params.Author }}
-		{{- else }}
-			{{ .Site.Params.Author }}
-		{{- end }}
-
-		{{- if .PublishDate }}
-			<br>
-			<span>on&nbsp;</span><time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
-		{{- end }}
+		<div class="post-head">
+            <h1 class="post-title">{{ .Title }}</h1>
+            <div class="post-info">
+			{{- if .PublishDate }}
+                <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006-01-02" }}</time>
+			{{- end }}
+            </div>
 		</div>
-
-		<h1 class="post-title">{{ .Title }}</h1>
-		<div class="post-line"></div>
 
 		{{ .Content }}
 
@@ -30,8 +22,6 @@
 		{{- if .Prev }}
 		<a href="{{ .Prev.URL }}" class="right arrow">&#8594;</a>
 		{{- end }}
-
-		<a href="#" class="top">Top</a>
 	</div>
 </main>
 

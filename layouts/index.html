@@ -1,33 +1,50 @@
 {{ partial "header.html" . }}
 
 <main>
-	<div class="catalogue">
-		{{ range (.Paginate .Pages).Pages }}
-			<a href="{{ .Permalink }}" class="catalogue-item">
-				<div>
-					<time datetime="{{ .PublishDate }}" class="catalogue-time">{{ .PublishDate.Format "January 2, 2006" }}</time>
-					<h1 class="catalogue-title">{{ .Title }}</h1>
-					<div class="catalogue-line"></div>
-	
-					<p>
-						{{ .Summary }}
-					</p>
-	
-				</div>
-			</a>
-		{{ end }}
-	</div>
-	
-	<div class="pagination">
-		{{ if .Paginator.HasPrev }}
-			<a href="{{ .Paginator.Prev.URL }}" class="left arrow">&#8592;</a>
-		{{ end }}
-		{{ if .Paginator.HasNext }}
-			<a href="{{ .Paginator.Next.URL }}" class="right arrow">&#8594;</a>
-		{{ end }}
-	
-		<span>{{ .Paginator.PageNumber }}</span>
-	</div>
+    <div class="profile">
+        <div class="profile-box">
+            <h2 class="profile-title">
+                Profile
+            </h2>
+            <div class="profile-body">{{ .Content }}</div>
+        </div>
+        <div class="profile-box">
+            <img class="profile-image" src="{{ .Site.BaseURL }}{{ .Site.Params.profileImagePath }}"/>
+        </div>
+    </div>
+    <div class="catalogue">
+        <h2 class="catalogue-title">
+            News
+        </h2>
+    {{ $articles := where .Pages "Section" "articles" }}
+    {{ range first 5 $articles.ByDate.Reverse }}
+        <a href="{{ .Permalink }}" class="catalogue-item">
+            <div>
+                <p class="catalogue-item-title">
+                    <time datetime="{{ .PublishDate }}"
+                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>{{ .Title }}
+                </p>
+            </div>
+        </a>
+    {{ end }}
+    </div>
+    <div class="catalogue">
+        <h2 class="catalogue-title">
+            Projects
+        </h2>
+    {{ $projects := where .Pages "Section" "projects" }}
+    {{ range $projects.ByDate.Reverse }}
+        <a href="{{ .Permalink }}" class="catalogue-item">
+            <div>
+                <p class="catalogue-item-title">
+                    <time datetime="{{ .PublishDate }}"
+                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>{{ .Title }}
+                    : {{ .Description }}
+                </p>
+            </div>
+        </a>
+    {{ end }}
+    </div>
 </main>
 
 {{ partial "footer.html" . }}

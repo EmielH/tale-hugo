@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<main>
+    <div class="catalogue">
+    {{ range (.Paginate .Pages).Pages.GroupByDate "2006"}}
+        <h2 class="catalogue-date">{{ .Key }}</h2>
+    {{ range .Pages }}
+        <a href="{{ .Permalink }}" class="catalogue-item">
+            <div>
+                <p class="catalogue-item-title">
+                    <time datetime="{{ .PublishDate }}"
+                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-01" }}</time>{{ .Title }}
+                </p>
+            </div>
+        </a>
+    {{ end }}
+    {{ end }}
+    </div>
+
+    <div class="pagination">
+    {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="left arrow">&#8592;</a>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="right arrow">&#8594;</a>
+    {{ end }}
+
+        <span>{{ .Paginator.PageNumber }}</span>
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

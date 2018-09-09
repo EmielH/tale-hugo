@@ -26,6 +26,7 @@ footer,
   &-title {
     @include transition(all .2s ease-out);
     color: $default-color;
+    font-weight: 100;
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
@@ -81,7 +82,7 @@ footer,
 }
 
 footer {
-  font-family: $serif-secondary;
+  font-family: $sans-serif;
   padding: 2rem 0;
   text-align: center;
 

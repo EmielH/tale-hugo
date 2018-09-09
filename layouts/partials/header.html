@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
 
-  <body>
-		<nav class="nav">
-			<div class="nav-container">
-			<a href="{{ .Site.BaseURL }}/">
-				<h2 class="nav-title">{{ .Site.Title }}</h2>
-			</a>
-			<ul>
-				<li><a href="{{ .Site.BaseURL }}about">About</a></li>
-				<li><a href="{{ .Site.BaseURL }}">Posts</a></li>
-			</ul>
-			</div>
-		</nav>
+<body>
+<nav class="nav">
+    <div class="nav-container">
+        <a href="{{ "" | absLangURL }}">
+            <h2 class="nav-title">{{ .Site.Title }}</h2>
+        </a>
+        <ul>
+            <li><a href="{{ "articles" | absLangURL }}">articles</a></li>
+            <li><a href="{{ "projects" | absLangURL }}">projects</a></li>
+        {{ if eq .Site.Language.Lang "ja" }}
+            <li><a href="{{ .Site.BaseURL }}">en</a></li>
+        {{ else }}
+            <li><a href="{{ printf "%s%s" .Site.BaseURL "ja" }}">ja</a></li>
+        {{ end }}
+        </ul>
+    </div>
+</nav>

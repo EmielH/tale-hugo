@@ -1,0 +1,44 @@
+.profile {
+  margin-top: 10px;
+  white-space: nowrap;
+  &-box {
+    width: 50%;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &-title {
+    color: $default-color;
+    font-family: $sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  &-body {
+    display: block;
+    font-family: $sans-serif;
+    font-size: 0.8rem;
+    font-weight: 10;
+    margin: .5rem 1rem;
+    white-space: normal;
+  }
+  &-image {
+    margin: 14px auto;
+  }
+
+  a {
+    color: $default-color;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile {
+    white-space: normal;
+    &-box {
+      width: 100%;
+    }
+  }
+}
