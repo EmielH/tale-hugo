@@ -14,6 +14,7 @@ html {
   font-family: $serif-primary;
   font-size: 14px;
   overflow-y: scroll;
+  text-rendering:optimizeLegibility;
 
   @media (min-width: 600px) {
     font-size: 16px;
