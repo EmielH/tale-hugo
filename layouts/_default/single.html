@@ -3,7 +3,7 @@
 <main>
 	<div class="post">
 		<div class="post-info">
-		<span>Written by</span>
+		<span>{{ i18n "writtenBy" }}</span>
 		{{- if .Params.Author }}
 			{{ .Params.Author }}
 		{{- else }}
@@ -12,7 +12,7 @@
 
 		{{- if .PublishDate }}
 			<br>
-			<span>on&nbsp;</span><time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
+			<span>{{ i18n "on" }}&nbsp;</span><time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2, 2006" }}</time>
 		{{- end }}
 		</div>
 
