@@ -1,0 +1,14 @@
+[posts]
+other = "Artikelen"
+
+[about]
+other = "Over"
+
+[writtenBy]
+other = "Geschreven door"
+
+[on]
+other = "op"
+
+[generator]
+other = "Gemaakt met <a href='https://gohugo.io'>Hugo</a> en thema <a href='https://github.com/EmielH/tale-hugo/'>Tale</a>."
