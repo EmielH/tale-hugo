@@ -10,7 +10,7 @@
 					<div class="catalogue-line"></div>
 	
 					<p>
-						{{ .Summary }}
+						{{ if isset .Params "summary" }}{{ .Params.Summary }}{{ else }}{{ .Summary }}{{ end }}
 					</p>
 	
 				</div>
