@@ -52,7 +52,7 @@ If you have cloned the theme, you can run `git pull` inside the theme folder.
 
 ### Internationalisation (i18n)
 
-Tale supports using other languages than English. Language files for the texts Tale uses are provided in the `i18n` directory. The default language is English. To swith languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
+Tale supports using other languages than English. Language files for the texts Tale uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
 
 ```
 defaultContentLanguage = "nl"
@@ -63,6 +63,10 @@ To translate texts your site uses, add an `i18n` folder to your site.
 Feel free to submit pull requests for other translations of Tale's texts.
 
 [Hugo documentation for multilingual sites](//gohugo.io/content-management/multilingual/)
+
+### Custom summaries
+
+Tale allows for writing the summary of your posts manually by setting the `summary` variable in the page frontmatter. If this variable is not set, the summary that Hugo automatically generates will be used.
 
 ## Acknowledgments
 
