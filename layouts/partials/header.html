@@ -6,12 +6,9 @@
   <body>
 		<nav class="nav">
 			<div class="nav-container">
-			<a href="{{ .Site.BaseURL }}/">
-				<h2 class="nav-title">{{ .Site.Title }}</h2>
-			</a>
-			<ul>
-				<li><a href="{{ .Site.BaseURL }}about">{{ i18n "about" }}</a></li>
-				<li><a href="{{ .Site.BaseURL }}">{{ i18n "posts" }}</a></li>
-			</ul>
+				<a href="{{ .Site.BaseURL }}/">
+					<h2 class="nav-title">{{ .Site.Title }}</h2>
+				</a>
+				{{ partial "header-menu.html" . }}
 			</div>
 		</nav>
