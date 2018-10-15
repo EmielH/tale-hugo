@@ -2,13 +2,9 @@
 
 <main>
 	<div class="post">
-		{{ partial "single-post-info.html" . }}
-
-		<h1 class="post-title">{{ .Title }}</h1>
-		<div class="post-line"></div>
+		{{ partial "single/header.html" . }}
 
 		{{ .Content }}
-
 	</div>
 
 	<div class="pagination">
