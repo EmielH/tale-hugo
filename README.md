@@ -72,6 +72,15 @@ Tale allows for writing the summary of your posts manually by setting the `summa
 
 Tale has basic support for taxonomies. Taxonomy and terms pages will be generated when you have defined taxonomies, but you need to include links to these pages yourself. For example, you can add a link to a taxonomy page in `header-menu.html`.
 
+### Placeholder partials
+
+The theme contains placeholder partials to make the theme more flexible and easier to adapt to your site without having to change the theme itself. These are:
+
+- `single/header.html`
+- `single/footer.html`
+
+These are included in the template for a single post, at the top of the post (below the title) and at the bottom of the post, respectively. These can be used, for example, to include additional information about the post author or for related posts. Create a file `/layouts/partials/single/header.html` or `footer.html` on your own site to have it included.
+
 ## Acknowledgments
 
 Thanks 
