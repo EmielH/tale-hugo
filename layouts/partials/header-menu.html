@@ -1,4 +1,4 @@
 <ul>
-    <li><a href="{{ .Site.BaseURL }}about">{{ i18n "about" }}</a></li>
-    <li><a href="{{ .Site.BaseURL }}">{{ i18n "posts" }}</a></li>
+    <li><a href="{{ "about" | relURL }}">{{ i18n "about" }}</a></li>
+    <li><a href="{{ "/" | relURL }}">{{ i18n "posts" }}</a></li>
 </ul>
