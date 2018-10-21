@@ -1,6 +1,8 @@
 {{ define "main" }}
 
 <main>
+	{{ partial "index/introduction.html" . }}
+
 	<div class="catalogue">
 		{{ range (.Paginate .Pages).Pages }}
 			{{ .Render "summary" }}
