@@ -81,6 +81,10 @@ The theme contains placeholder partials to make the theme more flexible and easi
 
 These are included in the template for a single post, at the top of the post (below the title) and at the bottom of the post, respectively. These can be used, for example, to include additional information about the post author or for related posts. Create a file `/layouts/partials/single/header.html` or `footer.html` on your own site to have it included.
 
+- `index/introduction.html`
+
+This partial is included at the top of the list of posts on the index page, allowing you to add an introduction to your site.
+
 ## Acknowledgments
 
 Thanks 
