@@ -85,6 +85,15 @@ These are included in the template for a single post, at the top of the post (be
 
 This partial is included at the top of the list of posts on the index page, allowing you to add an introduction to your site.
 
+### Copyright message
+
+The copyright message in the footer uses the name of the author of the site, as defined in `config.toml`. For example:
+
+```
+[Author]
+    name = "Emiel"
+```
+
 ## Acknowledgments
 
 Thanks 
