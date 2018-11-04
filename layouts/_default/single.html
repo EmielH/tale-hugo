@@ -13,11 +13,11 @@
 	</div>
 
 	<div class="pagination">
-		{{- if .Next }}
-		<a href="{{ .Next.URL }}" class="left arrow">&#8592;</a>
+		{{- if .PrevPage }}
+		<a href="{{ .PrevPage.URL }}" class="left arrow">&#8592;</a>
 		{{- end }}
-		{{- if .Prev }}
-		<a href="{{ .Prev.URL }}" class="right arrow">&#8594;</a>
+		{{- if .NextPage }}
+		<a href="{{ .NextPage.URL }}" class="right arrow">&#8594;</a>
 		{{- end }}
 
 		<a href="#" class="top">Top</a>
