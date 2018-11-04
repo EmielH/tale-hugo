@@ -8,7 +8,7 @@ description = "A port of the Tale theme for Hugo. Tale is a minimal Jekyll theme
 homepage = "https://github.com/EmielH/tale-hugo"
 tags = ["minimal", "clean", "responsive", "simple", "personal", "blog", "starter", "light", "typography"]
 features = ["pagination"]
-min_version = "0.43"
+min_version = "0.50"
 
 [author]
   name = "Emiel Hollander"
