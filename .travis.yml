@@ -5,6 +5,7 @@ go:
 
 install:
   - go get github.com/gohugoio/hugo
+  - hugo version
   - git clone https://github.com/gohugoio/hugoBasicExample.git
   - cd hugoBasicExample
   - git submodule add -f https://github.com/EmielH/tale-hugo.git themes/tale
