@@ -13,4 +13,3 @@ install:
 script:
   - hugo -t tale
   - tree
-  
