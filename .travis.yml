@@ -1,6 +1,6 @@
 install:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.51/hugo_0.51_Linux-64bit.tar.gz
-  - tar -xzvf hugo_0.51_Linux-64bit.tar.gz
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.tar.gz
+  - tar -xzvf hugo_0.52_Linux-64bit.tar.gz
   - chmod +x hugo
   - export PATH=$PATH:$PWD
   - hugo version
