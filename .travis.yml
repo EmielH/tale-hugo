@@ -8,8 +8,10 @@ install:
   - tar -xzvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
   - mv hugo ~/bin/
   - hugo version
+  - gem install html-proofer
   - git clone https://github.com/gohugoio/hugoBasicExample.git
 
 script:
   - cd hugoBasicExample
   - hugo -t tale-hugo --themesDir ../..
+  - htmlproofer public --check-html --disable-external
