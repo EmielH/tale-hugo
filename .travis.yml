@@ -14,4 +14,4 @@ install:
 script:
   - cd hugoBasicExample
   - hugo -t tale-hugo --themesDir ../..
-  - htmlproofer public --check-html --disable-external
+  - htmlproofer public --check-html --disable-external --allow-hash-href
