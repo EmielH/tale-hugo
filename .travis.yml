@@ -10,9 +10,10 @@ install:
   - hugo version
   - git clone https://github.com/gohugoio/hugoBasicExample.git
   - sudo apt-get install -y tree
+  - pwd
   - tree
 
 script:
   - cd hugoBasicExample
-  - hugo -t tale --themesDir ../..
+  - hugo -t tale-hugo --themesDir ../..
   - tree
