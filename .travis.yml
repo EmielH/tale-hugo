@@ -16,3 +16,6 @@ script:
   - cd hugoBasicExample
   - hugo -t tale-hugo --themesDir ../..
   - htmlproofer public --check-html --disable-external --allow-hash-href
+  - hugo serve -t tale-hugo --themesDir ../.. &
+  - sleep 25
+  - kill $!
