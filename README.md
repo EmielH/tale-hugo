@@ -96,6 +96,22 @@ The copyright message in the footer uses the name of the author of the site, as 
     name = "Emiel"
 ```
 
+### Additional CSS files
+
+The theme can load additional CSS files for you, e.g. to override some of the styles, or the CSS that goes with a component that you're using. To add additional CSS files, put these files in the `static` folder of your site and add the `css` parameter to `config.toml`, like so:
+
+```
+[Params]
+css = ["custom.css"]
+```
+
+To load multiple CSS files, use the parameter like this:
+
+```
+[Params]
+css = ["custom.css", "custom2.css"]
+```
+
 ## Acknowledgments
 
 Thanks 
