@@ -22,6 +22,9 @@
 		{{- $style			:= resources.Get "scss/tale.scss" | toCSS $cssOptions }}
   		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		{{ range .Site.Params.css -}}
+			<link rel="stylesheet" href="{{ . | relURL }}">
+		{{ end -}}
 	
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">
