@@ -11,6 +11,7 @@ install:
   - mv hugo ~/bin/
   - hugo version
   - gem install html-proofer
+  - htmlproofer --version
   - git clone https://github.com/gohugoio/hugoBasicExample.git
 
 script:
