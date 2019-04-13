@@ -18,4 +18,4 @@ install:
 script:
   - cd hugo-theme-test
   - hugo -t tale-hugo --themesDir ../..
-  - htmlproofer public --check-html --disable-external --allow-hash-href
+  - htmlproofer public --check-html --disable-external --allow-hash-href --checks-to-ignore LinkCheck
