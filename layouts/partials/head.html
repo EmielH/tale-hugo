@@ -1,14 +1,14 @@
 <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		{{- if eq .URL "/" }}
+		{{- if eq .Permalink "/" }}
 			<meta name="description" content="{{ .Site.Params.Description }}">
 		{{- else if .Description }}
 			<meta name="description" content="{{ .Description }}">
 		{{- end }}
 	
 		<title>
-			{{- if eq .URL "/" }}
+			{{- if eq .Permalink "/" }}
 				{{ .Site.Title }}
 			{{- else }}
 				{{ .Title }} &middot; {{ .Site.Title }}
@@ -32,6 +32,6 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
 	
 		<!-- RSS -->
-		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 	</head>
 	

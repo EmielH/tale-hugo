@@ -9,10 +9,10 @@
 	
 	<div class="pagination">
 		{{ if .Paginator.HasPrev }}
-			<a href="{{ .Paginator.Prev.URL }}" class="left arrow">&#8592;</a>
+			<a href="{{ .Paginator.Prev.RelPermalink }}" class="left arrow">&#8592;</a>
 		{{ end }}
 		{{ if .Paginator.HasNext }}
-			<a href="{{ .Paginator.Next.URL }}" class="right arrow">&#8594;</a>
+			<a href="{{ .Paginator.Next.RelPermalink }}" class="right arrow">&#8594;</a>
 		{{ end }}
 	
 		<span>{{ .Paginator.PageNumber }}</span>
