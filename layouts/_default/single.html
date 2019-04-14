@@ -14,10 +14,10 @@
 
 	<div class="pagination">
 		{{- if .PrevPage }}
-		<a href="{{ .PrevPage.URL }}" class="left arrow">&#8592;</a>
+		<a href="{{ .PrevPage.RelPermalink }}" class="left arrow">&#8592;</a>
 		{{- end }}
 		{{- if .NextPage }}
-		<a href="{{ .NextPage.URL }}" class="right arrow">&#8594;</a>
+		<a href="{{ .NextPage.RelPermalink }}" class="right arrow">&#8594;</a>
 		{{- end }}
 
 		<a href="#" class="top">Top</a>
