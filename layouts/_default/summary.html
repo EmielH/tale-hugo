@@ -5,7 +5,7 @@
         <div class="catalogue-line"></div>
 
         <p>
-            {{ if isset .Params "summary" }}{{ .Params.Summary }}{{ else }}{{ .Summary }}{{ end }}
+            {{ if isset .Params "summary" }}{{ .Params.Summary | markdownify }}{{ else }}{{ .Summary }}{{ end }}
         </p>
     </div>
 </a>
