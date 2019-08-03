@@ -7,13 +7,7 @@
 			<meta name="description" content="{{ .Description }}">
 		{{- end }}
 
-		<title>
-			{{- if .IsHome }}
-				{{ .Site.Title }}
-			{{- else }}
-				{{ .Title }} &middot; {{ .Site.Title }}
-			{{- end }}
-		</title>
+		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
 
 		<!-- CSS -->
 		{{- $inServerMode	:= .Site.IsServer }}
