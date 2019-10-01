@@ -36,6 +36,42 @@ Alternatively, you can tell Hugo to use the theme with the `server` command.
 hugo server -t tale
 ```
 
+#### Menu
+
+The top menu uses [Hugo Menus](https://gohugo.io/content-management/menus/), with the name of the menu being `main`. To turn on the menu, follow the steps there - you can either add something like this to the front-matter of your pages:
+
+```
+---
+menu: "main"
+---
+```
+
+... or you can add a menu section to your `config` file:
+
+```
+sectionPagesMenu = "main"
+```
+
+Or if you want more control, add a specific entry for each item in your menu:
+
+```
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = 0
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
+    url = "/posts/"
+    weight = 0
+```
+
+For menu internationalization/translation, see [Multilingual Mode: Menus](https://gohugo.io/content-management/multilingual/#menus).
+
 ### Additional information
 
 For more information, read the official [setup guide](https//gohugo.io/overview/installing/) of Hugo.
