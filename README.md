@@ -36,7 +36,23 @@ Alternatively, you can tell Hugo to use the theme with the `server` command.
 hugo server -t tale
 ```
 
-#### Menu
+### Additional information
+
+For more information, read the official [setup guide](https//gohugo.io/overview/installing/) of Hugo.
+
+### Update the theme
+
+If you have installed the theme as a git submodule, you can update the theme by issuing the following command inside your project folder.
+
+```
+git submodule update --remote --rebase
+```
+
+If you have cloned the theme, you can run `git pull` inside the theme folder.
+
+## Configuration
+
+### Menu
 
 The top menu uses [Hugo Menus](https://gohugo.io/content-management/menus/), with the name of the menu being `main`. To turn on the menu, follow the steps there - you can either add something like this to the front-matter of your pages:
 
@@ -71,22 +87,6 @@ Or if you want more control, add a specific entry for each item in your menu:
 ```
 
 For menu internationalization/translation, see [Multilingual Mode: Menus](https://gohugo.io/content-management/multilingual/#menus).
-
-### Additional information
-
-For more information, read the official [setup guide](https//gohugo.io/overview/installing/) of Hugo.
-
-### Update the theme
-
-If you have installed the theme as a git submodule, you can update the theme by issuing the following command inside your project folder.
-
-```
-git submodule update --remote --rebase
-```
-
-If you have cloned the theme, you can run `git pull` inside the theme folder.
-
-## Configuration
 
 ### Internationalisation (i18n)
 
@@ -150,7 +150,7 @@ css = ["custom.css", "custom2.css"]
 
 ## Acknowledgments
 
-Thanks 
+Thanks
 
 - to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
 - to [onedrawingperday](//github.com/onedrawingperday), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
