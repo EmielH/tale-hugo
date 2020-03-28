@@ -148,6 +148,14 @@ To load multiple CSS files, use the parameter like this:
 css = ["custom.css", "custom2.css"]
 ```
 
+## Additional parameters
+
+```
+[params]
+    # Mixpanel API key.
+    mixpanel_api_key = "Your Mixpanel API key"
+```
+
 ## Acknowledgments
 
 Thanks
