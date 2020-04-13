@@ -38,7 +38,7 @@ hugo server -t tale
 
 ### Additional information
 
-For more information, read the official [setup guide](https//gohugo.io/overview/installing/) of Hugo.
+For more information, read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 ### Update the theme
 
