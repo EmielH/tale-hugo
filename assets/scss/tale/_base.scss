@@ -1,6 +1,7 @@
 * {
   @include box-sizing;
   line-height: 1.5;
+  font-family: "Microsoft Yahei";
 }
 
 html,
@@ -64,4 +65,8 @@ img {
 
 td {
   vertical-align: top;
+}
+
+p {
+  text-indent: 2rem;
 }

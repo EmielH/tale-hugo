@@ -5,7 +5,8 @@
     color: $default-tint;
     font-family: $serif-secondary;
     letter-spacing: 0.5px;
-    text-align: center;
+    text-align: right;
+    line-height: 1em;
 
     span {
       font-style: italic;
@@ -14,8 +15,8 @@
 
   &-title {
     color: $default-shade;
-    font-family: $sans-serif;
-    font-size: 4rem;
+    font-family: "Microsoft Yahei", $sans-serif;
+    font-size: 2rem;
     margin: 1rem 0;
     text-align: center;
   }
@@ -23,13 +24,23 @@
   &-line {
     border-top: 0.4rem solid $default-shade;
     display: block;
-    margin: 0 auto 3rem;
+    margin: 0 auto 0.5rem;
     width: 4rem;
+  }
+
+  h2 {
+    border-bottom: 1px solid #444444;
   }
 
   p {
     margin: 0 0 1rem;
     text-align: justify;
+    line-height: 2em;
+    text-indent: 2em;
+  }
+
+  li {
+    line-height: 2em;
   }
 
   a:hover {
