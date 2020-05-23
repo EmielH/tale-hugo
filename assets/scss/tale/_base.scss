@@ -36,24 +36,22 @@ h6 {
   font-family: $sans-serif;
   line-height: normal;
 }
-
 a {
   color: $blue;
   text-decoration: none;
 }
 
 blockquote {
-  border-left: .25rem solid $grey-2;
+  // border-left: .25rem solid $grey-2;
   color: $grey-1;
-  margin: .8rem 0;
-  padding: .5rem 1rem;
+  background: $gray-e;
 
   p:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: 600px) {
-    padding: 0 5rem 0 1.25rem;
+    padding: 1rem 2rem 0.25rem 2rem;
   }
 }
 

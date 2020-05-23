@@ -3,7 +3,9 @@
     border-bottom: 1px solid $grey-2;
     color: $default-color;
     display: block;
-    padding: 2rem 0;
+    padding: 0 25px;
+    max-height: 30em;
+    margin-top: 10px;
 
     &:hover .catalogue-line,
     &:focus .catalogue-line {
@@ -13,7 +15,6 @@
     &:last-child {
       border: 0;
     }
-    max-height: 30em;
   }
 
   &-time {
