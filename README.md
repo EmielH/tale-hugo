@@ -1,13 +1,13 @@
 # Tale
 
-This is a tale-hugo theme for Chinese.
+This is a tale-hugo theme for Chinese layout.
 
 ## Quick Start
 
 ```
 cd /path/to/your/hugo/
 
-git submodule add https://github.com/hanyouqing/tale-hugo.git themes/tale4zh
+git submodule add https://github.com/alc-beijing/tale-hugo.git themes/tale4zh
 
 git submodule init
 
