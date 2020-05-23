@@ -39,4 +39,13 @@
     url('/fonts/libre-baskerville-v7-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
     url('/fonts/libre-baskerville-v7-latin-italic.svg#LibreBaskerville') format('svg'); /* Legacy iOS */
 }
-
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('//at.alicdn.com/t/webfont_86oq155nxz.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/webfont_86oq155nxz.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/webfont_86oq155nxz.woff2') format('woff2'),
+    url('//at.alicdn.com/t/webfont_86oq155nxz.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/webfont_86oq155nxz.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/webfont_86oq155nxz.svg#AlibabaPuHuiTiL') format('svg'); /* iOS 4.1- */
+  }
