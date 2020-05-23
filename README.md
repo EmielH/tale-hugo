@@ -7,7 +7,11 @@ This is a tale-hugo theme for Chinese.
 ```
 cd /path/to/your/hugo/
 
-git submodule add https://github.com/hanyouqing/tale-hugo.git theme/tale4zh
+git submodule add https://github.com/hanyouqing/tale-hugo.git themes/tale4zh
+
+git submodule init
+
+git submodule update
 ```
 
 Keep original documentation below:
