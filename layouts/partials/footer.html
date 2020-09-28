@@ -1,4 +1,9 @@
 		<footer>
+			{{ if and .Params.comments (gt (len .Site.DisqusShortname) 0) }}
+            <figure class="article-discussion">
+              {{ template "_internal/disqus.html" . }}
+            </figure>
+			{{ end }}
 			<span>
 			&copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Author.name }}. {{ i18n "generator" | safeHTML }}
 			</span>
