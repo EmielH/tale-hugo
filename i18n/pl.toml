@@ -1,0 +1,11 @@
+[writtenBy]
+other = "Autor"
+
+[on]
+other = "opublikowano"
+
+[generator]
+other = "Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme."
+
+[publishdate]
+other = "{{ .PublishDate.Day }}. {{ index $.Site.Data.months_pl (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }}"
