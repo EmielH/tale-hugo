@@ -114,6 +114,16 @@ comments: true
 ---
 ```
 
+### Google Analytics
+
+Tale supports Google Analytics integration using Hugo's provided `google_analytics_async` template.
+
+To enable it, add the `googleAnalytics` tag to your `config.toml`. It will be added on all pages.
+
+```toml
+googleAnalytics = "UA-133700000-0"
+```
+
 ### Custom summaries
 
 Tale allows for writing the summary of your posts manually by setting the `summary` variable in the page frontmatter. If this variable is not set, the summary that Hugo automatically generates will be used.
