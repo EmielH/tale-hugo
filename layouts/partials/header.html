@@ -1,7 +1,11 @@
 		<nav class="nav">
 			<div class="nav-container">
 				<a href="{{ "/" | relURL }}">
-					<h2 class="nav-title">{{ .Site.Title }}</h2>
+					{{ if .IsHome }}
+						<h1 class="nav-title">{{ .Site.Title }}</h2>
+					{{ else }}
+						<h2 class="nav-title">{{ .Site.Title }}</h2>
+					{{ end }}
 				</a>
 				{{ partial "header-menu.html" . }}
 			</div>
