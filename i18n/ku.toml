@@ -5,7 +5,7 @@ other = "Nivîskar:"
 other = "li"
 
 [generator]
-other = "Bi <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a>-ê hatiye çêkirin."
+other = "Bi <a href='https://gohugo.io'>Hugo</a> û <a href='https://github.com/EmielH/tale-hugo/'>Tale</a>-ê hatiye çêkirin."
 
 [publishdate]
 other = "{{ .PublishDate.Day }} {{ index $.Site.Data.months_ku (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }}"
