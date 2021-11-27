@@ -40,6 +40,9 @@ hugo server -t tale
 
 For more information, read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
+#### config.toml Template
+The file ``config.toml.example`` can be copy & moved to the root directory of the Hugo page with the command ``cp config.toml.example config.toml`` followed by the command ```mv config.toml ../.```..The copy command in this form only works if you are in the ```themes ``` folder.
+
 ### Update the theme
 
 If you have installed the theme as a git submodule, you can update the theme by issuing the following command inside your project folder.

@@ -1,0 +1,27 @@
+baseURL = "https://www.xxxx.com/"
+title = "xxxx"
+theme = "tale"
+
+[author]
+  name = "xxxxx"
+  url = "https://www.xxxx.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    title = "Archives"
+    url = "/archives.html"
+    weight = 1
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    title = "Projects"
+    url = "/projects.html"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about.html"
+    weight = 3
