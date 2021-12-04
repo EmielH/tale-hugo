@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<main>
+	<div class="post">
+		{{ partial "single/title.html" . }}
+		{{ partial "single/header.html" . }}
+
+		<div class="post-archive">
+			{{ range (where (where .Site.Pages "IsPage" "=" true) "Params.hidden" "!=" true ).GroupByDate "2006" }}
+			<h2>{{ .Key }}</h2>
+			<ul class="listing">
+				{{ range .Pages }}
+				<li>
+					<span class="date">{{ .Date.Format "01/02" }}</span>
+					<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+				</li>
+				{{ end }}
+			</ul>
+			{{ end }}
+
+		</div>
+
+		{{ partial "single/footer.html" . }}
+	</div>
+</main>
+
+{{ end }}
