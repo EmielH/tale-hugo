@@ -7,6 +7,8 @@
 
 		{{ partial "single/header.html" . }}
 
+		🕒 {{ math.Round (div (countwords .Content) 220.0) }} {{ i18n "minutes" }}
+
 		{{ .Content }}
 
 		{{ partial "single/footer.html" . }}
