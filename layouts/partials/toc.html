@@ -1,0 +1,13 @@
+{{ if .Params.toc }}
+<aside class="toc">
+  <script src="{{ "js/toc.js" | relURL }}"></script>
+  <div id="tocContainer">
+    <div id="tocTitle">
+      &#9776; <!-- Trigram for heaven, aka. hamburger menu -->
+    </div>
+    <div id="tocCollapsible">
+      {{ .TableOfContents }}
+    </div>
+  </div>
+</aside>
+{{ end }}
