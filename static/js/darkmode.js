@@ -6,7 +6,7 @@ function initDarkMode() {
 }
 
 function toggleDarkMode() {
-    console.log("toggle");
+    document.body.classList.toggle("dark");
 }
 
 window.addEventListener("load", initDarkMode);

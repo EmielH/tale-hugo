@@ -31,7 +31,7 @@
   }
 
   &-line {
-    @include transition(all .3s ease-out);
+    @include transition($color-transition, width .3s ease-out);
     border-top: .2rem solid var(--default-shade);
     display: block;
     width: 2rem;

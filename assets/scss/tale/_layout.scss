@@ -1,5 +1,5 @@
-body {
-    --test-var: #ff0;
+* {
+    @include transition($color-transition);
 }
 
 .container {
@@ -22,7 +22,6 @@ footer,
 }
 
 #darkModeToggle {
-    background: var(--test-var);
     float: right;
     position: sticky;
     top: 2rem;
@@ -44,7 +43,7 @@ footer,
   }
 
   &-title {
-    @include transition(all .2s ease-out);
+    @include transition($color-transition, opacity .2s ease-out);
     color: var(--default-color);
     display: inline-block;
     margin: 0;
@@ -64,7 +63,7 @@ footer,
   }
 
   li {
-    @include transition(all .2s ease-out);
+    @include transition($color-transition, opacity .2s ease-out);
     color: var(--default-color);
     display: inline-block;
     opacity: .6;
