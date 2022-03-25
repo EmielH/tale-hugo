@@ -1,6 +1,6 @@
 "use strict";
 
-function sizeFinal() {
+function measureToc() {
     let tocContainer = document.getElementById("tocContainer");
     let tocTitle = document.getElementById("tocTitle");
     let tocCollapsible = document.getElementById("tocCollapsible");
@@ -41,13 +41,17 @@ function sizeFinal() {
     });
 }
 
-function measureToc() {
+let resizeTimeout = null;
+function measureTocAfterResize() {
     // Chrome sometimes does not finish layout when the resize event handler is called, so wait a
     // bit before recalculating sizes. This does not usually result in weird visual effects because
     // it's really hard to resize a window while hovering over the table of contents so we can
     // assume that it's closed when the measurement is running.
-    setTimeout(sizeFinal, 200);
+    if (resizeTimeout != null) {
+	clearTimeout(resizeTimeout);
+    }
+    resizeTimeout = setTimeout(measureToc, 200);
 }
 
 window.addEventListener("load", measureToc);
-window.addEventListener("resize", measureToc);
+window.addEventListener("resize", measureTocAfterResize);
