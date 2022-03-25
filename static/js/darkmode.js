@@ -14,12 +14,14 @@ function initDarkMode() {
 	toggleDarkMode();
     }
 
-    // This is needed because without the requestAnimationFrame() call, the change below takes
-    // effect immediately, even on the transition on the initial page load, which is not
-    // desirable.
-    requestAnimationFrame(() => {
+    // This is needed because without the setTimeout() call, the change below takes effect
+    // immediately, even on the transition on the initial page load, which is not desirable.
+    //
+    // One might think that this is exactly what requestAnimationFrame() is for, but alas, that only
+    // works about 90% of the time (on Chrome 99)
+    setTimeout(() => {
 	document.documentElement.style.setProperty("--color-scheme-transition-time", ".4s");
-    });
+    }, 50);
 }
 
 function toggleDarkMode() {
