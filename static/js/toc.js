@@ -1,17 +1,23 @@
 "use strict";
 
+let oldWidth = -1, oldHeight = -1;
+
 function measureToc() {
+    if (window.innerWidth === oldWidth && window.innerHeight === oldHeight) {
+	// In addition to being a bit of optimization, this clause somehow prevents triggering a
+	// bug in Firefox 98.2.0 on Android that makes the stickiness of the table of contents
+	// wonky after scrolling to the bottom, then scrolling up.
+	return;
+    }
+
+    oldWidth = window.innerWidth;
+    oldHeight = window.innerHeight;
+
     let tocContainer = document.getElementById("tocContainer");
     let tocTitle = document.getElementById("tocTitle");
     let tocCollapsible = document.getElementById("tocCollapsible");
 
-    let oldContainerWidth = tocContainer.style.width;
-    let oldCollapsibleWidth = tocCollapsible.style.width;
-    let oldCollapsibleHeight = tocCollapsible.style.height;
-
     // Set relevant elements to automatic sizing.
-    // Setting these properties to the empty string is not enough because the stylesheet might have
-    // set them already and we need to override that.
     tocContainer.style.width = "fit-content";
     tocCollapsible.style.width = "fit-content";
     tocCollapsible.style.height = "fit-content";
@@ -22,7 +28,6 @@ function measureToc() {
 	// them wrap text differently than when autosizing. Add a pixel because it's better to wrap
 	// too little than to wrap too much,
 	let titleWidth = tocTitle.offsetWidth + 1;
-	let containerWidth = tocContainer.offsetWidth + 1;
 	let collapsibleWidth = tocCollapsible.offsetWidth + 1;
 	let collapsibleHeight = tocCollapsible.offsetHeight + 1;
 
@@ -35,13 +40,14 @@ function measureToc() {
 	tocCollapsible.style.setProperty("--measured-expanded-width", clampedCollapsibleWidth + "px");
 	tocCollapsible.style.setProperty("--measured-height", collapsibleHeight + "px");
 
-	tocContainer.style.width = oldContainerWidth;
-	tocCollapsible.style.width = oldCollapsibleWidth;
-	tocCollapsible.style.height = oldCollapsibleHeight;
+	tocContainer.style.removeProperty("width");
+	tocCollapsible.style.removeProperty("width");
+	tocCollapsible.style.removeProperty("height");
     });
 }
 
 let resizeTimeout = null;
+
 function measureTocAfterResize() {
     // Chrome sometimes does not finish layout when the resize event handler is called, so wait a
     // bit before recalculating sizes. This does not usually result in weird visual effects because
