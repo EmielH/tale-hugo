@@ -27,7 +27,7 @@ pre code > span {
     // This isn't very pretty, but the precise RGB values are generated
     // server-side, the usual trick of putting the colors in CSS variables does
     // not quite work and this is the best I could come up with.
-    opacity: var(--code-opacity);
+    filter: var(--code-filter);
 }
 .highlight {
   background-color: var(--grey-4);

@@ -17,6 +17,10 @@ aside.toc {
     float: left;
     height: 0;
     overflow: display;
+
+    // This is apparenty necessary so that the table of contents covers elements
+    // with the "filter:" property set.
+    z-index: 1;
 }
 
 #tocTitle {
