@@ -1,5 +1,14 @@
 function initDarkMode() {
-    let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    let storedScheme = localStorage.getItem("color-scheme");
+    let isDark;
+
+    if (storedScheme === "dark") {
+	isDark = true;
+    } else if (storedScheme === "light") {
+	isDark = false;
+    } else {
+	isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
 
     if (!isDark) {
 	toggleDarkMode();
@@ -15,6 +24,9 @@ function initDarkMode() {
 
 function toggleDarkMode() {
     document.body.classList.toggle("light");
+    let isDark = !document.body.classList.contains("light");
+
+    localStorage.setItem("color-scheme", isDark ? "dark" : "light");
 }
 
 // Doing this in an onload handler would let the initial color appear for a
