@@ -77,5 +77,13 @@ aside.toc {
 
 nav#TableOfContents ul {
     list-style-type: none;
-    padding-inline-start: 0px;
+    padding-inline-start: 1rem;
+}
+
+nav#TableOfContents > ul {
+    padding-inline-start: 0;
+}
+
+nav#TableOfContents li {
+    margin-top: 0.4rem;
 }
