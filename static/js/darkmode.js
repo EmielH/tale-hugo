@@ -1,3 +1,5 @@
+"use strict";
+
 function initDarkMode() {
     let storedScheme = localStorage.getItem("color-scheme");
     let isDark;
