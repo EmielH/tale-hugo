@@ -13,7 +13,7 @@ function initDarkMode() {
     }
 
     if (!isDark) {
-	toggleDarkMode();
+	document.body.classList.toggle("light");
     }
 
     // This is needed because without the setTimeout() call, the change below takes effect
