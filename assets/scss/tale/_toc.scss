@@ -57,7 +57,7 @@ aside.toc {
     @include transition(
 	$color-transition,
 	width .1s ease-out,
-        height .1s ease-out);
+	height .1s ease-out);
 }
 
 #tocContainer > div {
