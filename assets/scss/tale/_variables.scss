@@ -1,12 +1,19 @@
 // Colors
 
 $color-transition:
-    background-color .5s ease-out,
-    color .5s ease-out,
-    border-color .5s ease-out,
-    box-shadow .5s ease-out;
+    // We indirect the transition time through a variable whose default value
+    // is zero so that the color scheme change on page load happens immediately.
+    // Then, after the desired scheme is determined, the variable is changed to
+    // a non-zero value in JS.
+    background-color var(--color-scheme-transition-time) ease-out,
+    color var(--color-scheme-transition-time) ease-out,
+    border-color var(--color-scheme-transition-time) ease-out,
+    box-shadow var(--color-scheme-transition-time) ease-out;
 
-body:not(.dark) {
+
+// Make the default be light mode. That way, the more complicated case is the
+// default and thus bugs are discovered earlier.
+body.light {
     --default-color: #555;
     --background-color: #fff;
     --default-shade: #353535;
@@ -21,10 +28,10 @@ body:not(.dark) {
     --code-color: #bf616a;
 }
 
-body.dark {
+body:not(.light) {
     --default-color: #888;
     --background-color: #000;
-    --default-shade: #aaa;
+    --default-shade: #989898;
     --default-tint: #555;
     --grey-1: #606060;
     --grey-2: #404040;

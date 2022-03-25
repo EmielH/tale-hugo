@@ -2,6 +2,10 @@
     @include transition($color-transition);
 }
 
+:root {
+    --color-scheme-transition-time: 0s;
+}
+
 .container {
   margin: 0 auto;
   max-width: 800px;
