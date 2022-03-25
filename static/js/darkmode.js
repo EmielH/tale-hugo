@@ -13,22 +13,15 @@ function initDarkMode() {
     }
 
     if (!isDark) {
-	document.body.classList.toggle("light");
+	// When this is executed in the <HEAD> element, the specified
+	// transition apparently does not take effect.
+	document.documentElement.classList.toggle("light");
     }
-
-    // This is needed because without the setTimeout() call, the change below takes effect
-    // immediately, even on the transition on the initial page load, which is not desirable.
-    //
-    // One might think that this is exactly what requestAnimationFrame() is for, but alas, that only
-    // works about 90% of the time (on Chrome 99)
-    setTimeout(() => {
-	document.documentElement.style.setProperty("--color-scheme-transition-time", ".4s");
-    }, 50);
 }
 
 function toggleDarkMode() {
-    document.body.classList.toggle("light");
-    let isDark = !document.body.classList.contains("light");
+    document.documentElement.classList.toggle("light");
+    let isDark = !document.documentElement.classList.contains("light");
 
     localStorage.setItem("color-scheme", isDark ? "dark" : "light");
 }

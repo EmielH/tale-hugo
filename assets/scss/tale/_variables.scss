@@ -1,19 +1,18 @@
 // Colors
 
+// This is necessary because some elements want to set transitions themselves,
+// which would result in deleting the color transitions specified in less
+// specific selectors.
 $color-transition:
-    // We indirect the transition time through a variable whose default value
-    // is zero so that the color scheme change on page load happens immediately.
-    // Then, after the desired scheme is determined, the variable is changed to
-    // a non-zero value in JS.
-    background-color var(--color-scheme-transition-time) ease-out,
-    color var(--color-scheme-transition-time) ease-out,
-    border-color var(--color-scheme-transition-time) ease-out,
-    box-shadow var(--color-scheme-transition-time) ease-out;
+    background-color .4s ease-out,
+    color .4s ease-out,
+    border-color .4s ease-out,
+    box-shadow .4s ease-out;
 
 
 // Make the default be light mode. That way, the more complicated case is the
 // default and thus bugs are discovered earlier.
-body.light {
+:root.light {
     --default-color: #555;
     --background-color: #fff;
     --default-shade: #353535;
@@ -29,7 +28,7 @@ body.light {
     --code-opacity: 1.0;
 }
 
-body:not(.light) {
+:root:not(.light) {
     --default-color: #888;
     --background-color: #000;
     --default-shade: #989898;
