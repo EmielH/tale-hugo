@@ -10,7 +10,7 @@ $color-transition:
     box-shadow .4s ease-out;
 
 
-// Make the default be light mode. That way, the more complicated case is the
+// Make the default be dark mode. That way, the more complicated case is the
 // default and thus bugs are discovered earlier.
 :root.light {
     --default-color: #555;
@@ -41,7 +41,7 @@ $color-transition:
     --blue: #1d6baf;
     --shadow-color: rgba(0, 0, 0, .2);
     --code-color: #a3434c;
-    --code-filter: brightness(0.7);
+    --code-filter: contrast(0.4) brightness(0.9);
 }
 
 // Fonts
