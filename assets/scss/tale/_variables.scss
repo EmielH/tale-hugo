@@ -1,15 +1,47 @@
 // Colors
-$default-color: #555;
-$default-shade: #353535;
-$default-tint: #aaa;
-$grey-1: #979797;
-$grey-2: #e5e5e5;
-$grey-3: #f0f0f0;
-$grey-4: #f9f9f9;
-$white: #fff;
-$blue: #4a9ae1;
-$shadow-color: rgba(0, 0, 0, .2);
-$code-color: #bf616a;
+// This is necessary because some elements want to set transitions themselves,
+// which would result in deleting the color transitions specified in less
+// specific selectors.
+$color-transition:
+    background-color .4s ease-out,
+    color .4s ease-out,
+    border-color .4s ease-out,
+    box-shadow .4s ease-out;
+
+
+// Make the default be dark mode. That way, the more complicated case is the
+// default and thus bugs are discovered earlier.
+:root.light {
+    --default-color: #555;
+    --background-color: #fff;
+    --default-shade: #353535;
+    --default-tint: #aaa;
+    --grey-1: #979797;
+    --grey-2: #e5e5e5;
+    --grey-3: #f0f0f0;
+    --grey-4: #f9f9f9;
+    --white: #fff;
+    --blue: #4a9ae1;
+    --shadow-color: rgba(0, 0, 0, .2);
+    --code-color: #bf616a;
+    --code-filter: ;
+}
+
+:root:not(.light) {
+    --default-color: #888;
+    --background-color: #000;
+    --default-shade: #989898;
+    --default-tint: #555;
+    --grey-1: #606060;
+    --grey-2: #404040;
+    --grey-3: #202020;
+    --grey-4: #181818;
+    --white: #fff;
+    --blue: #1d6baf;
+    --shadow-color: rgba(0, 0, 0, .2);
+    --code-color: #a3434c;
+    --code-filter: contrast(0.4) brightness(0.9);
+}
 
 // Fonts
 $serif-primary: 'Libre Baskerville', 'Times New Roman', Times, serif;
