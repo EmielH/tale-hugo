@@ -58,7 +58,7 @@ aside.toc {
     width: calc(2rem + var(--measured-title-width));
     --measured-title-width: 2.4rem;
 
-    @include transition(
+@include transition(
 	$color-transition,
 	width .1s ease-out,
 	height .1s ease-out);
