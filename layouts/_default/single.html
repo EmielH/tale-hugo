@@ -1,7 +1,9 @@
 {{ define "main" }}
 
 <main>
-	<div class="post">
+	{{ partial "toc.html" . }}
+
+        <div class="post">
 		{{ partial "single/post-info.html" . }}
 		{{ partial "single/title.html" . }}
 
