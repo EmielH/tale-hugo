@@ -5,8 +5,8 @@
 
 html,
 body {
-  color: $default-color;
-  background-color: #fff;
+  color: var(--default-color);
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
 }
@@ -31,19 +31,19 @@ h3,
 h4,
 h5,
 h6 {
-  color: $default-shade;
+  color: var(--default-shade);
   font-family: $sans-serif;
   line-height: normal;
 }
 
 a {
-  color: $blue;
+  color: var(--blue);
   text-decoration: none;
 }
 
 blockquote {
-  border-left: .25rem solid $grey-2;
-  color: $grey-1;
+  border-left: .25rem solid var(--grey-2);
+  color: var(--grey-1);
   margin: .8rem 0;
   padding: .5rem 1rem;
 

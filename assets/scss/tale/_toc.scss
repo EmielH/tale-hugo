@@ -17,6 +17,10 @@ aside.toc {
     float: left;
     height: 0;
     overflow: display;
+
+    // This is apparenty necessary so that the table of contents covers elements
+    // with the "filter:" property set.
+    z-index: 1;
 }
 
 #tocTitle {
@@ -34,7 +38,7 @@ aside.toc {
 }
 
 #tocContainer {
-    background: $grey-3;
+    background-color: var(--grey-3);
     border-radius: 1rem;
     margin: 2rem;
     padding: 1rem;
@@ -54,11 +58,14 @@ aside.toc {
     width: calc(2rem + var(--measured-title-width));
     --measured-title-width: 2.4rem;
 
-    @include transition(all .1s ease-out);
+@include transition(
+	$color-transition,
+	width .1s ease-out,
+	height .1s ease-out);
 }
 
 #tocContainer > div {
-    border-left: 0.4rem solid black;
+    border-left: 0.4rem solid var(--default-shade);
     padding-left: 1rem;
 }
 
@@ -72,7 +79,7 @@ aside.toc {
 
     // No transition on width so that there is no re-wrapping during the
     // opening/closing transition
-    @include transition(height .1s ease-out);
+    @include transition($color-transition, height .1s ease-out);
 }
 
 nav#TableOfContents ul {

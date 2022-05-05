@@ -30,4 +30,6 @@
 
 		<!-- RSS -->
 		<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+		<script src="{{ "js/darkmode.js" | relURL }}"></script>
 	</head>
