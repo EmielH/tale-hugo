@@ -4,7 +4,11 @@
   width: 80%;
 }
 
-main,
+// Carve out an exception from the 80% narrowing of the viewport for the table
+// of contents. This is ugly, but there isn't a better way, since the table of
+// contents must be a child of the "main" element so that it its scrolling
+// behavior is intuitive.
+main > *,
 footer,
 .nav-container {
   display: block;

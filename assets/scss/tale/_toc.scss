@@ -1,0 +1,89 @@
+aside.toc {
+    position: sticky;
+    top: 0;
+    max-width: 30%;
+
+    // We want the table of contents to be on the left (horizontally), to be
+    // positioned at a specific point (vertically), stick to the top on scroll
+    // and it should not affect the layout of other elements.
+    // "float: left" accomplishes the horizontal positioning, position in the
+    // element tree the vertical positioning and "position: sticky" does the
+    // stickiness. "height: 0" makes sure that the flow of other elements is not
+    // affected.
+    //
+    // There does not seem to be a better way to do this unless one is willing
+    // to implement scrolling in JS: "position" must be set to sticky so neither
+    // fixed, nor absolute, nor relative positioning can be used.
+    float: left;
+    height: 0;
+    overflow: display;
+}
+
+#tocTitle {
+    // This is so that we can measure it in JS
+    width: fit-content;
+}
+
+#tocContainer:hover {
+    width: calc(2rem + var(--measured-expanded-width));
+}
+
+#tocContainer:hover div#tocCollapsible {
+    height: var(--measured-height);
+    width: var(--measured-expanded-width);
+}
+
+#tocContainer {
+    background: $grey-3;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+
+    // This makes the gap between the two contained divs vanish. Why that gap
+    // exists, no clue.
+    display: flex;
+    flex-direction: column;
+
+    // We want to hide the table of contents before revealing it on hover
+    overflow: hidden;
+
+    // In addition to the measured width of the title, we need to add the two
+    // rems for the border (we are using box-sizing: border-box). Also add a
+    // reasonable default value to minimize visual changes while the page is
+    // loading.
+    width: calc(2rem + var(--measured-title-width));
+    --measured-title-width: 2.4rem;
+
+    @include transition(all .1s ease-out);
+}
+
+#tocContainer > div {
+    border-left: 0.4rem solid black;
+    padding-left: 1rem;
+}
+
+#tocContainer div#tocCollapsible {
+    // Collapsed by default
+    height: 0;
+
+    // If we did not force this element to a given width, it would keep
+    // re-wrapping during the opening/closing transition.
+    width: var(--measured-expanded-width);
+
+    // No transition on width so that there is no re-wrapping during the
+    // opening/closing transition
+    @include transition(height .1s ease-out);
+}
+
+nav#TableOfContents ul {
+    list-style-type: none;
+    padding-inline-start: 1rem;
+}
+
+nav#TableOfContents > ul {
+    padding-inline-start: 0;
+}
+
+nav#TableOfContents li {
+    margin-top: 0.4rem;
+}
