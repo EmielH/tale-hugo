@@ -103,12 +103,16 @@ Feel free to submit pull requests for other translations of Tale's texts.
 [Hugo documentation for multilingual sites](//gohugo.io/content-management/multilingual/)
 
 ### Disqus
+
 Tale supports Disqus integration, a comment system that empowers dynamic features to static websites. To install it, just add the key `disqusShortname` in your `config.toml`
-``` toml
+
+```toml
 disqusShortname = "disqus-example"
-``` 
-Add the parameter `comments` in the front-matter of the pages where you want to allow comments 
-``` 
+```
+
+Add the parameter `comments` in the front-matter of the pages where you want to allow comments
+
+```
 ---
 comments: true
 ---
@@ -116,12 +120,12 @@ comments: true
 
 ### Google Analytics
 
-Tale supports Google Analytics integration using Hugo's provided `google_analytics_async` template.
+Tale supports Google Analytics (UA and GA4) integration using Hugo's provided `google_analytics` template.
 
 To enable it, add the `googleAnalytics` tag to your `config.toml`. It will be added on all pages.
 
 ```toml
-googleAnalytics = "UA-133700000-0"
+googleAnalytics = "UA-133700000-0" # or G-1337000000 for GA4
 ```
 
 ### Custom summaries
@@ -179,4 +183,5 @@ Thanks
 - to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which I used some useful snippets of code.
 
 ## License
+
 See [LICENSE](https://github.com/EmielH/tale-hugo/blob/master/LICENSE).
