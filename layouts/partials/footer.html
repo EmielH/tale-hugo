@@ -1,5 +1,5 @@
 		<footer>
-			{{ if and .Params.comments (gt (len .Site.DisqusShortname) 0) }}
+			{{ if and .Params.comments (gt (len .Site.Config.Services.Disqus.Shortname) 0) }}
             <figure class="article-discussion">
               {{ template "_internal/disqus.html" . }}
             </figure>
