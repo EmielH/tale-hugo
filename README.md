@@ -154,8 +154,8 @@ This partial is included at the top of the list of posts on the index page, allo
 The copyright message in the footer uses the name of the author of the site, as defined in `config.toml`. For example:
 
 ```
-[Author]
-    name = "Emiel"
+[Params]
+author = { name = "Emiel" }
 ```
 
 ### Additional CSS files
