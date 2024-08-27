@@ -10,9 +10,8 @@ tags = ["minimal", "clean", "responsive", "simple", "personal", "blog", "starter
 features = ["pagination"]
 min_version = "0.50"
 
-[author]
-  name = "Emiel Hollander"
-  homepage = "https://www.emielhollander.nl"
+[params]
+author = { name = "Emiel Hollander", homepage = "https://www.emielhollander.nl" }
 
 # If porting an existing theme
 [original]
