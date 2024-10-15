@@ -104,7 +104,7 @@ Feel free to submit pull requests for other translations of Tale's texts.
 
 ### Disqus
 
-Tale supports Disqus integration, a comment system that empowers dynamic features to static websites. To install it, just add the key `disqusShortname` in your `config.toml`
+Tale supports Disqus integration, a comment system that empowers dynamic features to static websites. To install it, just add it to your config as described in [the Hugo Documentation](https://gohugo.io/content-management/comments/#configure-disqus).
 
 ```toml
 disqusShortname = "disqus-example"
