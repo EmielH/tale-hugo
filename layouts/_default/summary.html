@@ -1,6 +1,7 @@
 <a href="{{ .Permalink }}" class="catalogue-item">
     <div>
         <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
+        🕒 {{ math.Round (div (countwords .Content) 220.0) }} {{ i18n "minutes" }}
         <h2 class="catalogue-title">{{ .Title }}</h2>
         <div class="catalogue-line"></div>
 

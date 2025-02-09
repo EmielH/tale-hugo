@@ -9,3 +9,6 @@ other = "Bi <a href='https://gohugo.io'>Hugo</a> û <a href='https://github.com/
 
 [publishdate]
 other = "{{ .PublishDate.Day }} {{ index $.Site.Data.months_ku (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }}"
+
+[minutes]
+other = "minutes"

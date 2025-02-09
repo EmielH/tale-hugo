@@ -9,3 +9,6 @@ other = "Creato con <a href='https://gohugo.io'>Hugo</a> usando il tema <a href=
 
 [publishdate]
 other = "{{ .PublishDate.Day }} {{ index $.Site.Data.months_it (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }}"
+
+[minutes]
+other = "minuti"
